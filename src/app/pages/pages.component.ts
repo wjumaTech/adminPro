@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeaderComponent } from '../shared/header/header.component';
-import { SidebarComponent } from '../shared/sidebar/sidebar.component';
-import { BreadcrumbsComponent } from '../shared/breadcrumbs/breadcrumbs.component';
+import { PagesModule } from './pages.module';
+import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'app-pages',
@@ -13,10 +11,8 @@ import { BreadcrumbsComponent } from '../shared/breadcrumbs/breadcrumbs.componen
   imports: [
     CommonModule,
     RouterOutlet,
-    DashboardComponent,
-    HeaderComponent,
-    SidebarComponent,
-    BreadcrumbsComponent
+    PagesModule,
+    SharedModule
   ],
   templateUrl: './pages.component.html',
   styles: ``
