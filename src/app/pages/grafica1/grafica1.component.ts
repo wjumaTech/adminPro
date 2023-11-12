@@ -1,34 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { ChartData, ChartEvent, ChartType, Color } from 'chart.js';
-import { NgChartsModule } from 'ng2-charts';
-
+import { ComponentsModule } from '../../components/components.module';
 @Component({
   selector: 'app-grafica1',
   standalone: true,
   imports: [
     CommonModule,
-    NgChartsModule
+    ComponentsModule
   ],
   templateUrl: './grafica1.component.html',
   styles: ``
 })
 export class Grafica1Component {
 
-  // Doughnut
-  public doughnutChartLabels: string[] = [
-    'Download Sales',
-    'In-Store Sales',
-    'Mail-Order Sales',
-  ];
-  public doughnutChartData: ChartData<'doughnut'> = {
-    labels: this.doughnutChartLabels,
-    datasets: [
-      { data: [350, 450, 100] }
-    ],
-  };
-
-  
+  labels1:string[] = ['pan', 'refrescos', 'tacos'];
+  data1: number[] = [10,30,25];
 
 }
